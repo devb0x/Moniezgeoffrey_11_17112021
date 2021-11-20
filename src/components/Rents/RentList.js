@@ -1,14 +1,21 @@
 import React from "react"
 
 import './RentList.css'
+import RentItem from "./RentItem"
 
 const RentList = (props) => {
-  console.log('test')
+  console.log(props)
 
   return (
-    <div>
-
-    </div>
+    <ul className="rents-list">
+      {props.items.map(rent => (
+        <RentItem
+          key={rent.id}
+          title={rent.title}
+          cover={rent.cover}
+        />
+      ))}
+    </ul>
   )
 }
 

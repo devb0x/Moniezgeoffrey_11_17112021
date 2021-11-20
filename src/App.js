@@ -2,8 +2,8 @@ import React, { useState } from "react"
 
 import './App.css';
 
-import Header from "./components/header/Header"
-import Footer from "./components/footer/Footer"
+import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
 import RentItem from "./components/Rents/RentItem"
 import RentList from "./components/Rents/RentList"
 
@@ -41,12 +41,12 @@ const rentsData = [
 ]
 
 const App = () => {
-  const [rents, setRents] = useState(rentsData)
+  // const [rents, setRents] = useState(rentsData)
 
   return (
     <div>
       <Header />
-      <RentList items={rents} />
+      <RentList items={rentsData} />
       <Footer />
     </div>
   );
