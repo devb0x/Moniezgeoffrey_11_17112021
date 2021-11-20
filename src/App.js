@@ -6,6 +6,7 @@ import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import RentItem from "./components/Rents/RentItem"
 import RentList from "./components/Rents/RentList"
+import HeroBanner from "./components/HeroBanner/HeroBanner"
 
 const rentsData = [
   {
@@ -38,6 +39,68 @@ const rentsData = [
       "Montmartre"
     ]
   },
+  {
+    "id": "b9123946",
+    "title": "Magnifique appartement proche Canal Saint Martin",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
+    "pictures": [
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-2.jpg",
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-3.jpg",
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-4.jpg",
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-5.jpg",
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-6.jpg"
+    ],
+    "description": "Profitez du charme de la vie parisienne dans un magnifique appartement. A 3 minutes à pied du Canl Saint Martin, vous serez proche des transports, mais également de nombreux commerces. L'appartement est tout équipé, et possède également un parking pour ceux qui souhaitent se déplacer en voiture.",
+    "host": {
+      "name": "Della Case",
+      "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-1.jpg"
+    },
+    "rating": "4",
+    "location": "Ile de France - Paris 10e",
+    "equipments": [
+      "Parking",
+      "Sèche Cheveux",
+      "Machine à laver",
+      "Wi-fi",
+      "Cuisine équipée",
+      "Télévision"
+    ],
+    "tags": [
+      "Canal Saint Martin",
+      "République",
+      "Appartement"
+    ]
+  },
+  {
+    "id": "46d188c5",
+    "title": "Studio de charme - Buttes Chaumont",
+    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-2-1.jpg",
+    "pictures": [
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-2-1.jpg",
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-2-2.jpg",
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-2-3.jpg",
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-2-4.jpg"
+    ],
+    "description": "À seulement deux pas des Buttes Chaumont, venez découvrir Paris dans ce studio tout équipé. Entièrement équipé pour votre confort et élégamment décoré, il vous permettra de vivre comme un Parisien le temps de votre séjour.",
+    "host": {
+      "name": "Franck Maher",
+      "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-2.jpg"
+    },
+    "rating": "3",
+    "location": "Ile de France - Paris 20e",
+    "equipments": [
+      "Wi-fi",
+      "Cuisine équipée",
+      "Télévision",
+      "Sèche Cheveux"
+    ],
+    "tags": [
+      "Buttes Chaumont",
+      "Laumière",
+      "Studio"
+    ]
+  }
 ]
 
 const App = () => {
@@ -46,6 +109,7 @@ const App = () => {
   return (
     <div>
       <Header />
+      <HeroBanner />
       <RentList items={rentsData} />
       <Footer />
     </div>
