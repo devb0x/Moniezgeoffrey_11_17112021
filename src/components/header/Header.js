@@ -5,8 +5,7 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="header-nav">
-        <img className="header-logo" src="../../assets/img/img.png" alt="Kusa logo" />
-        {/*<img src=""/>*/}
+        <img className="header-logo" src={require("../../public/assets/img/logo.svg")} alt="Kusa logo" />
         <ul>
           <li className="header-nav__item">
             <a href="#">Accueil</a>

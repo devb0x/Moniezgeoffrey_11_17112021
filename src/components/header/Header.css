@@ -1,23 +1,19 @@
 .header {
-  outline: 1px solid red;
   width: 90%;
   margin: auto;
   display: flex;
-  /*justify-content: space-between;*/
+  padding: 1rem 0;
 }
 
 .header-logo {
-  /*height: 100px;*/
-  /*width: 100px;*/
+
   height: 47px;
   width: 145px;
 }
 
 img {
-  /*border: 3px solid blue;*/
   height: 47px;
   width: 145px;
-  background-image: url("../../assets/img/img.png");
   background-repeat: no-repeat;
 }
 
