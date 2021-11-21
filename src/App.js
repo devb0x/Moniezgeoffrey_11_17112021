@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer"
 import RentItem from "./components/Rents/RentItem"
 import RentList from "./components/Rents/RentList"
 import HeroBanner from "./components/HeroBanner/HeroBanner"
+import NotFound from "./components/NotFound/NotFound"
 
 const rentsData = [
   {
@@ -111,6 +112,7 @@ const App = () => {
       <Header />
       <HeroBanner />
       <RentList items={rentsData} />
+      <NotFound />
       <Footer />
     </div>
   );

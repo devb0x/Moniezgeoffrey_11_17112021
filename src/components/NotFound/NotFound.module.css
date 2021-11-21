@@ -1,0 +1,23 @@
+.not-found__wrapper {
+  margin: auto;
+  text-align: center;
+}
+
+.not-found__wrapper h1 {
+  font-weight: 700;
+  font-size: 6rem;
+}
+
+.not-found__wrapper p {
+  margin: auto;
+  width: 260px;
+  font-size: 18px;
+  line-height: 1.6rem;
+}
+
+.not-found__link {
+  display: flex;
+  font-size: 0.875rem;
+  width: fit-content;
+  margin: 8.313rem auto;
+}
