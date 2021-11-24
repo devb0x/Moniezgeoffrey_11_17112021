@@ -1,5 +1,6 @@
 import React from "react"
 import './Header.css'
+import { NavLink } from "react-router-dom"
 
 const Header = () => {
   return (
@@ -8,10 +9,10 @@ const Header = () => {
         <img className="header-logo" src={require("../../public/assets/img/logo.svg")} alt="Kusa logo" />
         <ul>
           <li className="header-nav__item">
-            <a href="#">Accueil</a>
+            <NavLink activeClassName="active" to="/homepage">Accueil</NavLink>
           </li>
           <li className="header-nav__item">
-            <a href="#" >A propos</a>
+            <NavLink activeClassName="active" to="/404" >A propos</NavLink>
           </li>
         </ul>
       </nav>

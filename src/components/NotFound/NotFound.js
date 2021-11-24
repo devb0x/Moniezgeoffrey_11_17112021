@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 import styles from './NotFound.module.css'
 
@@ -9,12 +10,12 @@ const NotFound = () => {
         <h1>404</h1>
         <p>Oups! La page que vous demandez n'existe pas.</p>
       </div>
-      <a
-        href="#"
+      <Link
+        to="/homepage"
         className={`${styles['not-found__link']}`}
       >
         Retourner sur la page d'accueil
-      </a>
+      </Link>
     </div>
   )
 }

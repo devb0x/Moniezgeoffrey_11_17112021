@@ -9,11 +9,12 @@ const RentList = (props) => {
   return (
     <ul className="rents-list">
       {props.items.map(rent => (
-        <RentItem
-          key={rent.id}
-          title={rent.title}
-          cover={rent.cover}
-        />
+          <RentItem
+            key={rent.id}
+            id={rent.id}
+            title={rent.title}
+            cover={rent.cover}
+          />
       ))}
     </ul>
   )
