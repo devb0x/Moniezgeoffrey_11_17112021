@@ -1,10 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import {Redirect, Route, Switch} from "react-router-dom"
 
 import './App.css';
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
-import RentItem from "./components/Rents/RentItem"
+// import RentItem from "./components/Rents/RentItem"
 import RentList from "./components/Rents/RentList"
 import HeroBanner from "./components/HeroBanner/HeroBanner"
 import NotFound from "./components/NotFound/NotFound"
