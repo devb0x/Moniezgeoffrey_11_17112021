@@ -1,13 +1,14 @@
-import React, { useState } from "react"
+import React from "react"
+import {Redirect, Route, Switch} from "react-router-dom"
 
 import './App.css';
-
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
-import RentItem from "./components/Rents/RentItem"
+// import RentItem from "./components/Rents/RentItem"
 import RentList from "./components/Rents/RentList"
 import HeroBanner from "./components/HeroBanner/HeroBanner"
 import NotFound from "./components/NotFound/NotFound"
+import RentItemDetail from "./components/Rents/RentItemDetail"
 
 const rentsData = [
   {
@@ -110,9 +111,26 @@ const App = () => {
   return (
     <div>
       <Header />
-      <HeroBanner />
-      <RentList items={rentsData} />
-      <NotFound />
+        <Switch>
+
+          <Route path={"/"} exact>
+            <Redirect to={"/homepage"} />
+          </Route>
+
+          <Route path={"/homepage"} exact>
+            <HeroBanner />
+            <RentList items={rentsData} />
+          </Route>
+
+          <Route path={"/rents/rent=:rentId"} exact>
+            <RentItemDetail />
+          </Route>
+
+          <Route path={'*'}>
+            <NotFound />
+          </Route>
+
+        </Switch>
       <Footer />
     </div>
   );

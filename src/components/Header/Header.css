@@ -38,3 +38,7 @@ img {
   color: #FF6060;
   text-decoration: none;
 }
+
+.header-nav__item > a.active {
+  border-bottom: 1px solid #FF6060;
+}

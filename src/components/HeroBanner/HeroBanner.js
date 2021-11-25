@@ -1,16 +1,20 @@
-import React from "react"
+import React, {Component} from "react"
 
 import './HeroBanner.css'
 
-const HeroBanner = () => {
-  const title = 'Chez vous, partout et ailleurs'
-
-  return (
-    <div className="hero-banner">
-      <img src={require("../../public/assets/img/img.png")} alt=""/>
-      <h1 className="hero-banner__title">{title}</h1>
-    </div>
-  )
+class HeroBanner extends Component {
+  constructor() {
+    super()
+    this.title = 'Chez vous, partout et ailleurs'
+  }
+  render() {
+    return (
+      <div className="hero-banner">
+        <img src={require("../../public/assets/img/img.png")} alt=""/>
+        <h1 className="hero-banner__title">{this.title}</h1>
+      </div>
+    )
+  }
 }
 
 export default HeroBanner
