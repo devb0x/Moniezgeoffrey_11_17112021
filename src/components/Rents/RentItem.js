@@ -6,6 +6,9 @@ import {Link} from "react-router-dom"
 
 class RentItem extends Component {
   render() {
+    // console.log('inside rend item component')
+    console.log(this.props.id)
+
     return (
       <li>
         <Link to={`/rents/rent=${this.props.id}`}>
