@@ -1,13 +1,17 @@
 import React, {Component} from "react"
-
+import {Link,
+} from "react-router-dom";
 import './Card.css'
 
 class Card extends Component {
   render() {
     return (
       <div className={'card ' + this.props.className}>
-        {this.props.children}
+        <Link to={`/rents/${this.props.id}`} >
+          {this.props.children}
+        </Link>
       </div>
+
     )
   }
 }

@@ -4,10 +4,12 @@ import './RentItemDetail.css'
 
 class RentItemDetail extends Component {
   render() {
+    console.log(this.props)
+
     return (
       <div>
         <p>placeholder for rentItemDetail</p>
-        <p>{this.params.rentId}</p>
+        <p>{this.props.items[0].id}</p>
       </div>
     )
   }

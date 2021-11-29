@@ -203,7 +203,8 @@ class App extends Component {
   render() {
     const { error, isLoaded, rents } = this.state;
     console.log(isLoaded)
-    console.log(rents.id)
+    // console.warn(rents)
+    // console.log(this.state.rents)
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -211,30 +212,45 @@ class App extends Component {
     } else {
       return (
         <div>
+          {/*{this.state.rents.map(item => (*/}
+          {/*  <li key={item.id}>*/}
+          {/*    {item.id} {item.title}*/}
+          {/*  </li>*/}
+          {/*))}*/}
+
           <Header />
+
           <Switch>
             <Route path={"/"} exact>
              <Redirect to={"/homepage"} />
-           </Route>
+            </Route>
 
             <Route path={"/homepage"} exact>
               <HeroBanner />
               <RentList items={rents} />
             </Route>
 
-            <Route path={"/rents/rent=:this.props.itemsId"} >
-              <RentItemDetail />
+            {/*{this.state.rents.map(item => (*/}
+            {/*  <Route path={"/rents/rent=:item.id"} key={item.id} >*/}
+            {/*    <RentItemDetail />*/}
+            {/*  </Route>*/}
+            {/*))}*/}
+
+            {/* <Route path={"/rents/rent=:rent.id"} > */}
+            <Route path={"/rents/:id"} >
+              <RentItemDetail items={rents}/>
             </Route>
 
-            <Route path={'*'}>
-              <NotFound />
+
+
+            <Route path={'*'} component={NotFound}>
+              {/*<NotFound />*/}
             </Route>
 
           </Switch>
 
           <Footer />
         </div>
-
       );
     }
   }
