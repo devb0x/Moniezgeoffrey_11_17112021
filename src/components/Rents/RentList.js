@@ -13,6 +13,13 @@ class RentList extends Component {
             id={rent.id}
             title={rent.title}
             cover={rent.cover}
+            pictures={rent.pictures}
+            description={rent.description}
+            host={rent.host}
+            rating={rent.rating}
+            location={rent.location}
+            equipments={rent.equipments}
+            tags={rent.tags}
           />
         ))}
       </ul>
