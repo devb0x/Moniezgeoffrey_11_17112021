@@ -1,0 +1,25 @@
+.rent-wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.carrousel-img {
+  object-fit: cover;
+  width: 335px;
+  height: 255px;
+  border-radius: 10px;
+}
+
+.rent-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.rent-location {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.rent-tags {
+  outline: 2px solid purple;
+}

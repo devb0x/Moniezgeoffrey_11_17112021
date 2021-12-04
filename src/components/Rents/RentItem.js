@@ -2,14 +2,15 @@ import React, {Component} from "react"
 
 import './RentItem.css'
 import Card from "../UI/Card"
-import {Link} from "react-router-dom"
 
 class RentItem extends Component {
   render() {
+
     return (
-      <li>
-        <Link to={`/rents/rent=${this.props.id}`}>
-          <Card className="rent-item">
+      <li key={this.props.id}>
+        {/* <Route path={`/rents/rent=${this.props.id}`}> */}
+        {/*<Link to={"/rents/rentsDetail"}>*/}
+          <Card id={this.props.id} className="rent-item">
             <img
               className="rent-item__thumbnail"
               src={this.props.cover}
@@ -19,7 +20,7 @@ class RentItem extends Component {
               {this.props.title}
             </div>
           </Card>
-        </Link>
+        {/* </Route> */}
       </li>
     )
   }
