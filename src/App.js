@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer"
 import RentList from "./components/Rents/RentList"
 import HeroBanner from "./components/HeroBanner/HeroBanner"
 import NotFound from "./components/NotFound/NotFound"
-import RentItemDetail from "./components/Rents/RentItemDetail"
+import RentItemDetail from "./components/Rents/RentItemDetail/RentItemDetail"
 
 class App extends Component {
   constructor(props) {

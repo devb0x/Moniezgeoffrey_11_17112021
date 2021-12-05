@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 
-import styles from "./RentItemDetail.module.css"
+import styles from "../RentItemDetail.module.css"
 
-class RentEquipments extends Component {
+class RentItemDetailEquipments extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -34,4 +34,4 @@ class RentEquipments extends Component {
   }
 }
 
-export default RentEquipments
+export default RentItemDetailEquipments

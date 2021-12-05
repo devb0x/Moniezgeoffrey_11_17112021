@@ -1,9 +1,9 @@
 import React, {Component} from "react"
 
 import styles from './RentItemDetail.module.css'
-import Tag from "../UI/Tag"
-import RentDescription from "./RentDescription"
-import RentEquipments from "./RentEquipments"
+import Tag from "../../UI/Tag"
+import RentItemDetailDescription from "./RentItemDetailDescription/RentItemDetailDescription"
+import RentItemDetailEquipments from "./RentItemDetailEquipments/RentItemDetailEquipments"
 
 class RentItemDetail extends Component {
   constructor(props) {
@@ -58,8 +58,8 @@ class RentItemDetail extends Component {
         </div>
 
         <div>
-          <RentDescription desc={this.state.rent.description}/>
-          <RentEquipments items={this.state.rent.equipments}/>
+          <RentItemDetailDescription desc={this.state.rent.description}/>
+          <RentItemDetailEquipments items={this.state.rent.equipments}/>
         </div>
 
       </div>
