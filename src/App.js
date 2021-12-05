@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { Redirect, Route, Switch } from "react-router-dom"
-import globalStore from 'react'
 
 import './App.css';
 import Header from "./components/Header/Header"

@@ -3,6 +3,7 @@ import React, {Component} from "react"
 import styles from './RentItemDetail.module.css'
 import Tag from "../UI/Tag"
 import RentDescription from "./RentDescription"
+import RentEquipments from "./RentEquipments"
 
 class RentItemDetail extends Component {
   constructor(props) {
@@ -58,7 +59,7 @@ class RentItemDetail extends Component {
 
         <div>
           <RentDescription desc={this.state.rent.description}/>
-          {/*<button>Équipements</button>*/}
+          <RentEquipments items={this.state.rent.equipments}/>
         </div>
 
       </div>

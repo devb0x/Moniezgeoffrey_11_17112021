@@ -14,7 +14,7 @@ class RentDescription extends Component {
   toggleHandler() {
     this.setState({
       isOpen: !this.state.isOpen
-    });
+    })
   }
 
   render() {
@@ -30,11 +30,6 @@ class RentDescription extends Component {
           <p>
             {this.props.desc}
           </p>
-        }
-        {!this.state.isOpen &&
-        <p>
-          isOpen = false
-        </p>
         }
       </div>
     )
