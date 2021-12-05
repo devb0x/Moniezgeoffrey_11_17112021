@@ -4,6 +4,7 @@ import styles from './RentItemDetail.module.css'
 import Tag from "../../UI/Tag"
 import RentItemDetailDescription from "./RentItemDetailDescription/RentItemDetailDescription"
 import RentItemDetailEquipments from "./RentItemDetailEquipments/RentItemDetailEquipments"
+import RentItemDetailRating from "./RentItemDetailRating/RentItemDetailRating"
 
 class RentItemDetail extends Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class RentItemDetail extends Component {
         </div>
 
         <div>
-          <p>rating: {this.state.rent.rating}</p>
+          <RentItemDetailRating value={this.state.rent.rating}/>
           <span>
             <div>{this.state.rent.host.name}</div>
             <img
