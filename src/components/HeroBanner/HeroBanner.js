@@ -1,6 +1,6 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 
-import './HeroBanner.css'
+import styles from './HeroBanner.module.css'
 
 class HeroBanner extends Component {
   constructor() {
@@ -10,9 +10,15 @@ class HeroBanner extends Component {
   render() {
     return (
       <div className="hero-banner">
-        <img src={require("../../public/assets/img/img.png")} alt=""/>
+        <img src={require("../../public/assets/img/banner.jpg")} alt="photo d'un paysage"/>
         <h1 className="hero-banner__title">{this.title}</h1>
       </div>
+
+
+      // <div className={`${styles['HeroBanner']}`}>
+      //   <img src={require("../../public/assets/img/banner.jpg")} alt=""/>
+      //   <h1 className={`${styles['hero-banner__title']}`}>{this.title}</h1>
+      // </div>
     )
   }
 }
