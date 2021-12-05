@@ -1,8 +1,8 @@
 import React, {Component} from "react"
 
-import styles from "./RentItemDetail.module.css"
+import styles from "../RentItemDetail.module.css"
 
-class RentDescription extends Component {
+class RentItemDetailDescription extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -21,7 +21,7 @@ class RentDescription extends Component {
     return (
       <div className={`${styles['test']}`}>
         <button
-          className={`${styles['test']}`}
+          className={`${styles['undefinedtoo']}`}
           onClick={this.toggleHandler}
         >
           Description <span className={`${styles['arrow']}`}>></span>
@@ -36,4 +36,4 @@ class RentDescription extends Component {
   }
 }
 
-export default RentDescription
+export default RentItemDetailDescription
