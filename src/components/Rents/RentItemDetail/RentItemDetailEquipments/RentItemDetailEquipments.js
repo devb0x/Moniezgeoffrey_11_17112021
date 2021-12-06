@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import styles from "../RentItemDetail.module.css"
+import style from "./RentItemDetailEquipments.module.css"
 
 class RentItemDetailEquipments extends Component {
   constructor(props) {
@@ -19,11 +19,11 @@ class RentItemDetailEquipments extends Component {
 
   render() {
     return (
-      <div className={`${styles['equipments-wrapper']}`}>
+      <div className={`${style['equipments-wrapper']}`}>
+       {/* <div className={style['equipments-wrapper']}> */}
         <button onClick={this.toggleHandler}>Équipements <span>></span></button>
           {this.state.isOpen &&
             <ul>
-
               {this.props.items.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}

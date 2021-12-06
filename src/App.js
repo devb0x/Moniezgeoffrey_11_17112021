@@ -8,6 +8,7 @@ import RentList from "./components/Rents/RentList"
 import HeroBanner from "./components/HeroBanner/HeroBanner"
 import NotFound from "./components/NotFound/NotFound"
 import RentItemDetail from "./components/Rents/RentItemDetail/RentItemDetail"
+import About from "./components/About/About"
 
 class App extends Component {
   constructor(props) {
@@ -65,6 +66,8 @@ class App extends Component {
               <HeroBanner />
               <RentList items={rents} />
             </Route>
+
+            <Route exact path={"/about"} component={About} />
 
             <Route
               exact path={"/rents/:id"}

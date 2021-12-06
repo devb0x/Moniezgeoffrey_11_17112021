@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import styles from './HeroBanner.module.css'
+// import styles from './HeroBanner.module.css'
 
 class HeroBanner extends Component {
   constructor() {
@@ -10,7 +10,7 @@ class HeroBanner extends Component {
   render() {
     return (
       <div className="hero-banner">
-        <img src={require("../../public/assets/img/banner.jpg")} alt="photo d'un paysage"/>
+        <img src={require("../../public/assets/img/banner.jpg")} alt="paysage"/>
         <h1 className="hero-banner__title">{this.title}</h1>
       </div>
 

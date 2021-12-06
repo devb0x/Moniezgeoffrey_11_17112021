@@ -12,9 +12,9 @@ class RentItemDetailDescription extends Component {
   }
 
   toggleHandler() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
+    this.setState((prevState) => {
+      return {isOpen: !prevState.isOpen}
+    });
   }
 
   render() {

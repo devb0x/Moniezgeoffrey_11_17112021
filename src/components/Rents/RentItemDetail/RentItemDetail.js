@@ -2,9 +2,8 @@ import React, {Component} from "react"
 
 import styles from './RentItemDetail.module.css'
 import Tag from "../../UI/Tag"
-import RentItemDetailDescription from "./RentItemDetailDescription/RentItemDetailDescription"
-import RentItemDetailEquipments from "./RentItemDetailEquipments/RentItemDetailEquipments"
 import RentItemDetailRating from "./RentItemDetailRating/RentItemDetailRating"
+import Collapse from "../../UI/Collapse"
 
 class RentItemDetail extends Component {
   constructor(props) {
@@ -59,8 +58,9 @@ class RentItemDetail extends Component {
         </div>
 
         <div>
-          <RentItemDetailDescription desc={this.state.rent.description}/>
-          <RentItemDetailEquipments items={this.state.rent.equipments}/>
+          <Collapse title="Description" data={this.state.rent.description}/>
+          {/*<ul></ul>*/}
+          <Collapse title="Équipements" data={this.state.rent.equipments}/>
         </div>
 
       </div>
