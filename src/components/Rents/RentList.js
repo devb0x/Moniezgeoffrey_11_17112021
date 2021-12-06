@@ -1,12 +1,12 @@
 import React, {Component} from "react"
 
-import './RentList.css'
 import RentItem from "./RentItem"
+import styles from './RentList.module.css'
 
 class RentList extends Component {
   render() {
     return (
-      <ul className="rents-list">
+      <ul className={`${styles['rents-list']}`}>
         {this.props.items.map(rent => (
           <RentItem
             key={rent.id}

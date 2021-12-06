@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import "./RentItemDetailRating.css"
+import styles from './RentItemDetailRating.module.css'
 
 class RentItemDetailRating extends Component {
   render() {
@@ -9,12 +9,13 @@ class RentItemDetailRating extends Component {
     const emptyStar = new Array(5 - rate).fill('empty')
 
     return (
-      <div>
+      <div className={`${styles['wrapper']}`}>
         {star.map((el, index) => (
           <i key={el + index} className="fa fa-star" />
         ))}
         {emptyStar.map((el, index) => (
-          <i key={el + index} className="fa fa-star gray" />
+          // <i key={el + index} className="fa fa-star" />
+          <i key={el + index} className={`fa fa-star ${styles['gray']}`} />
         ))}
       </div>
     )

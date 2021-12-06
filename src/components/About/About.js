@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
-import './About.css'
 import Collapse from "../UI/Collapse"
+import styles from "./About.module.css"
 
 class About extends Component {
   render() {
@@ -31,12 +31,17 @@ class About extends Component {
     ]
 
     return (
-      <section>
+      <section className={`${styles['section']}`}>
         <header>
-          <img src={require("../../public/assets/img/gustavo-alves-YOXSC4zRcxw-unsplash 1.jpg")} alt="paysage"/>
+          {/*<div className={`${styles['img']}`} />*/}
+          <img
+            className={`${styles['img']}`}
+            src={require("../../public/assets/img/gustavo-alves-YOXSC4zRcxw-unsplash 1.jpg")}
+            alt="paysage"/>
+          <div className={`${styles['background']}`} />
         </header>
 
-        <div>
+
           {about.map((item, index) => {
             return (
               <div key={index}>
@@ -44,7 +49,7 @@ class About extends Component {
               </div>
             )
           })}
-        </div>
+
 
       </section>
 

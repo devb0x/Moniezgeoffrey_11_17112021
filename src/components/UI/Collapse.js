@@ -1,5 +1,6 @@
 import React, {Component} from "react"
-import styles from "../Rents/RentItemDetail/RentItemDetail.module.css"
+
+import styles from './Collapse.module.css'
 
 class Collapse extends Component {
   constructor(props) {
@@ -7,7 +8,6 @@ class Collapse extends Component {
     this.state = {
       isOpen: false
     }
-    console.log(this.props)
     this.toggleHandler = this.toggleHandler.bind(this)
   }
 
@@ -19,26 +19,16 @@ class Collapse extends Component {
 
   render() {
     return (
-      <div className={`${styles['test']}`}>
+      <div className={`${styles['wrapper']}`}>
         <button
-          className={`${styles['undefined']}`}
+          className={`${styles['button']}`}
           onClick={this.toggleHandler}
         >
           {this.props.title} <span className={`${styles['arrow']}`}>></span>
         </button>
-        {/*{ (this.state.isOpen && this.props.title === 'Équipements') ?*/}
-        {/*  <ul>*/}
-        {/*    <li>*/}
-        {/*      test*/}
-        {/*    </li>*/}
-        {/*  </ul>*/}
-        {/*  :*/}
-        {/*    <p>{this.props.data}</p>*/}
-        {/*  }*/}
-        {/*}*/}
 
         { (this.props.title === "Équipements" && this.state.isOpen) &&
-          <ul>
+          <ul className={`${styles['collapse-content']}`}>
             {this.props.data.map((el, index) => (
               <li key={index}>
                 {el}
@@ -48,7 +38,7 @@ class Collapse extends Component {
         }
 
         { (this.props.title !== "Équipements" && this.state.isOpen) &&
-        <p>
+        <p className={`${styles['collapse-content']}`}>
           {this.props.data}
         </p>
         }

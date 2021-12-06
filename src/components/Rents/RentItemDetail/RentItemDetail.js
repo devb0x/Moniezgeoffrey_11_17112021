@@ -47,14 +47,14 @@ class RentItemDetail extends Component {
           <div className={`${styles['rent-tags']}`}>{this.getTags()}</div>
         </div>
 
-        <div>
+        <div className={`${styles['rent-owner__wrapper']}`}>
           <RentItemDetailRating value={this.state.rent.rating}/>
-          <span>
-            <div>{this.state.rent.host.name}</div>
+          <div className={`${styles['flex']}`}>
+            <div className={`${styles['owner']}`}>{this.state.rent.host.name}</div>
             <img
               src={this.state.rent.host.picture}
               alt={this.state.rent.host.name}/>
-          </span>
+          </div>
         </div>
 
         <div>
