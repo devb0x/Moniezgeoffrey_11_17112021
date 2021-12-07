@@ -23,6 +23,10 @@
   right: 1rem;
 }
 
+.arrow > i {
+  color: white;
+}
+
 .collapse-content {
   background-color: var(--lightGray);
   margin-top: 0;
@@ -34,6 +38,10 @@
 }
 
 @media screen and (min-width: 768px){
+  .button {
+    font-size: 18px;
+  }
+
   .collapse-content {
     font-size: 18px;
     line-height: initial;

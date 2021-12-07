@@ -9,3 +9,11 @@
   display: inline-block;
   margin: 0 1em 0 0;
 }
+
+@media screen and (min-width: 768px) {
+  .tag {
+    font-size: 14px;
+    min-width: 115px;
+    border-radius: 10px;
+  }
+}

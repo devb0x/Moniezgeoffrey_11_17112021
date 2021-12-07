@@ -43,6 +43,14 @@
 }
 
 @media screen and (min-width: 768px) {
+  .rent-title {
+    font-size: 36px;
+  }
+
+  .rent-location {
+    font-size: 18px;
+  }
+
   .container {
     display: flex;
   }

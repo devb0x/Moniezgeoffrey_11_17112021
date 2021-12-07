@@ -24,7 +24,10 @@ class Collapse extends Component {
           className={`${styles['button']}`}
           onClick={this.toggleHandler}
         >
-          {this.props.title} <span className={`${styles['arrow']}`}>></span>
+          {this.props.title}
+          <span className={`${styles['arrow']}`}>
+            <i className="fa fa-chevron-down" />
+          </span>
         </button>
 
         { (this.props.title === "Équipements" && this.state.isOpen) &&
