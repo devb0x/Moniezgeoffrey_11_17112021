@@ -4,6 +4,7 @@ import styles from './RentItemDetail.module.css'
 import Tag from "../../UI/Tag"
 import RentItemDetailRating from "./RentItemDetailRating/RentItemDetailRating"
 import Collapse from "../../UI/Collapse"
+import Carrousel from "../../UI/Carrousel"
 
 class RentItemDetail extends Component {
   constructor(props) {
@@ -36,12 +37,12 @@ class RentItemDetail extends Component {
 
       <div className={`${styles['rent-wrapper']}`}>
 
-        {/*<div>*/}
-          <img
-            className={`${styles['carrousel-img']}`}
-            src={this.state.rent.cover}
-            alt=""
-          />
+        {/*<img*/}
+        {/*  className={`${styles['carrousel-img']}`}*/}
+        {/*  src={this.state.rent.cover}*/}
+        {/*  alt=""*/}
+        {/*/>*/}
+        <Carrousel pictures={this.state.rent.pictures}/>
 
         <div className={`${styles['container']}`}>
 
