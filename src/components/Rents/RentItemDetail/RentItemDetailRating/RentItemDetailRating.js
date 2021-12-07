@@ -14,7 +14,6 @@ class RentItemDetailRating extends Component {
           <i key={el + index} className="fa fa-star" />
         ))}
         {emptyStar.map((el, index) => (
-          // <i key={el + index} className="fa fa-star" />
           <i key={el + index} className={`fa fa-star ${styles['gray']}`} />
         ))}
       </div>

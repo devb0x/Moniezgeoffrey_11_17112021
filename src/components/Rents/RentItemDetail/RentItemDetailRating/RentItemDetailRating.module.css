@@ -6,3 +6,19 @@
 .gray {
   color: #E3E3E3;
 }
+
+.wrapper > i {
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: auto;
+    margin-left: auto;
+    order: 2;
+  }
+
+  .wrapper > i {
+    margin-left: 10px;
+  }
+}

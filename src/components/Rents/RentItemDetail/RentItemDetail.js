@@ -36,31 +36,45 @@ class RentItemDetail extends Component {
 
       <div className={`${styles['rent-wrapper']}`}>
 
-        <div>
+        {/*<div>*/}
           <img
             className={`${styles['carrousel-img']}`}
             src={this.state.rent.cover}
             alt=""
           />
-          <h1 className={`${styles['rent-title']}`}>{this.state.rent.title}</h1>
-          <div className={`${styles['rent-location']}`}>{this.state.rent.location}</div>
-          <div className={`${styles['rent-tags']}`}>{this.getTags()}</div>
-        </div>
 
-        <div className={`${styles['rent-owner__wrapper']}`}>
-          <RentItemDetailRating value={this.state.rent.rating}/>
-          <div className={`${styles['flex']}`}>
-            <div className={`${styles['owner']}`}>{this.state.rent.host.name}</div>
-            <img
-              src={this.state.rent.host.picture}
-              alt={this.state.rent.host.name}/>
+        <div className={`${styles['container']}`}>
+
+          <div className={`${styles['rent-infos__wrapper']}`}>
+            <h1 className={`${styles['rent-title']}`}>{this.state.rent.title}</h1>
+            <div className={`${styles['rent-location']}`}>{this.state.rent.location}</div>
+            <div className={`${styles['rent-tags']}`}>{this.getTags()}</div>
           </div>
+
+          <div className={`${styles['rent-owner__wrapper']}`}>
+            <RentItemDetailRating value={this.state.rent.rating}/>
+            <div className={`${styles['flex']}`}>
+              <div className={`${styles['owner']}`}>{this.state.rent.host.name}</div>
+              <img
+                className={`${styles['owner-img']}`}
+                src={this.state.rent.host.picture}
+                alt={this.state.rent.host.name}/>
+            </div>
+          </div>
+
         </div>
 
-        <div>
-          <Collapse title="Description" data={this.state.rent.description}/>
-          {/*<ul></ul>*/}
-          <Collapse title="Équipements" data={this.state.rent.equipments}/>
+        {/*</div>*/}
+
+        <div className={`${styles['grid']}`}>
+          <Collapse
+            title="Description"
+            data={this.state.rent.description}
+          />
+          <Collapse
+            title="Équipements"
+            data={this.state.rent.equipments}
+          />
         </div>
 
       </div>

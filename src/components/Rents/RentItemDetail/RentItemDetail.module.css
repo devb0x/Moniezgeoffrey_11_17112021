@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.flex > img {
+.owner-img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -40,4 +40,33 @@
   font-size: 12px;
   align-self: center;
   margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+  }
+
+  .rent-owner__wrapper {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+  }
+
+  .owner {
+    font-size: 18px;
+  }
+
+  .owner-img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
 }
