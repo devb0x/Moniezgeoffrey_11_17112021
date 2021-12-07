@@ -37,25 +37,27 @@ class RentItemDetail extends Component {
 
       <div className={`${styles['rent-wrapper']}`}>
 
-        {/*<img*/}
-        {/*  className={`${styles['carrousel-img']}`}*/}
-        {/*  src={this.state.rent.cover}*/}
-        {/*  alt=""*/}
-        {/*/>*/}
         <Carrousel pictures={this.state.rent.pictures}/>
 
         <div className={`${styles['container']}`}>
 
           <div className={`${styles['rent-infos__wrapper']}`}>
-            <h1 className={`${styles['rent-title']}`}>{this.state.rent.title}</h1>
-            <div className={`${styles['rent-location']}`}>{this.state.rent.location}</div>
-            <div className={`${styles['rent-tags']}`}>{this.getTags()}</div>
+            <h1 className={`${styles['rent-title']}`}>
+              {this.state.rent.title}
+            </h1>
+            <div className={`${styles['rent-location']}`}>
+              {this.state.rent.location}
+            </div>
+            <div className={`${styles['rent-tags']}`}>
+              {this.getTags()}
+            </div>
           </div>
-
           <div className={`${styles['rent-owner__wrapper']}`}>
             <RentItemDetailRating value={this.state.rent.rating}/>
             <div className={`${styles['flex']}`}>
-              <div className={`${styles['owner']}`}>{this.state.rent.host.name}</div>
+              <div className={`${styles['owner']}`}>
+                {this.state.rent.host.name}
+              </div>
               <img
                 className={`${styles['owner-img']}`}
                 src={this.state.rent.host.picture}
@@ -64,8 +66,6 @@ class RentItemDetail extends Component {
           </div>
 
         </div>
-
-        {/*</div>*/}
 
         <div className={`${styles['grid']}`}>
           <Collapse
@@ -83,16 +83,5 @@ class RentItemDetail extends Component {
   }
 
 }
-
-// const RentItemDetail = () => {
-//   const params = useParams()
-//
-//   return (
-//     <div>
-//       <p>placeholder for rentItemDetail</p>
-//       <p>{params.rentId}</p>
-//     </div>
-//   )
-// }
 
 export default RentItemDetail
