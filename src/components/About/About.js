@@ -33,7 +33,6 @@ class About extends Component {
     return (
       <section className={`${styles['section']}`}>
         <header>
-          {/*<div className={`${styles['img']}`} />*/}
           <img
             className={`${styles['img']}`}
             src={require("../../public/assets/img/gustavo-alves-YOXSC4zRcxw-unsplash 1.jpg")}
@@ -44,9 +43,7 @@ class About extends Component {
 
           {about.map((item, index) => {
             return (
-              <div key={index}>
-                <Collapse title={item.category} data={item.text}/>
-              </div>
+              <Collapse key={index} title={item.category} data={item.text}/>
             )
           })}
 
