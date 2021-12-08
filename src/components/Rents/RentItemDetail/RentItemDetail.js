@@ -1,4 +1,5 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
+import { Redirect } from "react-router-dom"
 
 import styles from './RentItemDetail.module.css'
 import Tag from "../../UI/Tag"
@@ -16,8 +17,7 @@ class RentItemDetail extends Component {
 
   getRent() {
     const rent = this.props.items.filter(
-      el =>
-        el.id === this.props.match.params.id
+      el => el.id === this.props.match.params.id
     )
     return rent[0]
   }
@@ -33,6 +33,10 @@ class RentItemDetail extends Component {
   }
 
   render() {
+    if (!this.props.items.some(el => el.id === this.props.match.params.id)) {
+      return <Redirect to={'/404'} />
+    }
+
     return (
 
       <div className={`${styles['rent-wrapper']}`}>

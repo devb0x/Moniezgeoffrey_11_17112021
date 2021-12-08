@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 
 import RentItem from "./RentItem"
 import styles from './RentList.module.css'
@@ -27,22 +27,5 @@ class RentList extends Component {
     )
   }
 }
-
-// const RentList = (props) => {
-//   console.log(props)
-//
-//   return (
-//     <ul className="rents-list">
-//       {props.items.map(rent => (
-//           <RentItem
-//             key={rent.id}
-//             id={rent.id}
-//             title={rent.title}
-//             cover={rent.cover}
-//           />
-//       ))}
-//     </ul>
-//   )
-// }
 
 export default RentList
