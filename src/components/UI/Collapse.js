@@ -25,7 +25,7 @@ class Collapse extends Component {
           onClick={this.toggleHandler}
         >
           {this.props.title}
-          <span className={`${styles['arrow']}`}>
+          <span className={`${styles['arrow']} ${this.state.isOpen && styles.rotate} `} >
             <i className="fa fa-chevron-down" />
           </span>
         </button>
