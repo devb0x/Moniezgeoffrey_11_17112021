@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, {Component, Fragment} from "react"
 import { Redirect, Route, Switch } from "react-router-dom"
 
 import Header from "./components/Header/Header"
@@ -52,36 +52,37 @@ class App extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <div>
+        <Fragment>
+          <main>
+            <Header/>
 
-          <Header/>
+            <Switch>
+              <Route exact path={"/"}>
+                <Redirect to={"/homepage"}/>
+              </Route>
 
-          <Switch>
-            <Route exact path={"/"}>
-              <Redirect to={"/homepage"}/>
-            </Route>
+              <Route exact path={"/homepage"}>
+                <HeroBanner/>
+                <RentList items={rents}/>
+              </Route>
 
-            <Route exact path={"/homepage"}>
-              <HeroBanner/>
-              <RentList items={rents}/>
-            </Route>
+              <Route exact path={"/about"} component={About}/>
 
-            <Route exact path={"/about"} component={About}/>
+              <Route
+                exact path={"/rents/:id"}
+                render={(props) =>
+                  (
+                    <RentItemDetail {...props} items={rents}/>
+                  )}
+              />
 
-            <Route
-              exact path={"/rents/:id"}
-              render={(props) =>
-                (
-                  <RentItemDetail {...props} items={rents}/>
-                )}
-            />
+              <Route path={'*'} component={NotFound}/>
 
-            <Route path={'*'} component={NotFound}/>
-
-          </Switch>
+            </Switch>
+          </main>
 
           <Footer/>
-        </div>
+        </Fragment>
       );
     }
   }

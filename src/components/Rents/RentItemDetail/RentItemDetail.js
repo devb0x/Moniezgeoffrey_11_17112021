@@ -13,6 +13,8 @@ class RentItemDetail extends Component {
     this.state = {
       rent: this.getRent()
     }
+    this.getRent = this.getRent.bind(this)
+    this.getTags = this.getTags.bind(this)
   }
 
   getRent() {
