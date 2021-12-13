@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, {Component, Fragment} from "react"
 import { Link } from "react-router-dom"
 
 import styles from './NotFound.module.css'
@@ -6,37 +6,20 @@ import styles from './NotFound.module.css'
 class NotFound extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <div className={`${styles['not-found__wrapper']}`}>
           <h1>404</h1>
           <p>Oups! La page que vous demandez n'existe pas.</p>
+          <Link
+            to="/homepage"
+            className={`${styles['not-found__link']}`}
+          >
+            Retourner sur la page d'accueil
+          </Link>
         </div>
-        <Link
-          to="/homepage"
-          className={`${styles['not-found__link']}`}
-        >
-          Retourner sur la page d'accueil
-        </Link>
-      </div>
+      </Fragment>
     )
   }
 }
-
-// const NotFound = () => {
-//   return (
-//     <div>
-//       <div className={`${styles['not-found__wrapper']}`}>
-//         <h1>404</h1>
-//         <p>Oups! La page que vous demandez n'existe pas.</p>
-//       </div>
-//       <Link
-//         to="/homepage"
-//         className={`${styles['not-found__link']}`}
-//       >
-//         Retourner sur la page d'accueil
-//       </Link>
-//     </div>
-//   )
-// }
 
 export default NotFound

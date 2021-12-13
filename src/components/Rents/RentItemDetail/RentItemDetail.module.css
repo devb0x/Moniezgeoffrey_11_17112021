@@ -11,6 +11,7 @@
 .rent-wrapper {
   width: 90%;
   margin: auto;
+  min-height: calc(100vh - 209px);
 }
 
 .carrousel-img {

@@ -72,14 +72,20 @@ class RentItemDetail extends Component {
         </div>
 
         <div className={`${styles['grid']}`}>
-          <Collapse
-            title="Description"
-            data={this.state.rent.description}
-          />
-          <Collapse
-            title="Équipements"
-            data={this.state.rent.equipments}
-          />
+          <Collapse title="Description">
+            <p className={`${styles['collapse-content']}`}>
+              {this.state.rent.description}
+            </p>
+          </Collapse>
+          <Collapse title="Équipements">
+            <ul className={`${styles['collapse-content']}`}>
+              {this.state.rent.equipments.map((el, index) => (
+                <li key={index}>
+                  {el}
+                </li>
+              ))}
+            </ul>
+          </Collapse>
         </div>
 
       </div>

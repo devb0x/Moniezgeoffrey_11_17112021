@@ -8,20 +8,20 @@ class RentItem extends Component {
 
     return (
       <li key={this.props.id}>
-          <Card id={this.props.id} className={`${styles['rent-item']}`}>
-            <img
-              className={`${styles['rent-item__thumbnail']}`}
-              src={this.props.cover}
-              alt={this.props.title}
-            />
-            <div className={`${styles['rent-item__title']}`}>
-              {this.props.title}
-            </div>
-          </Card>
+        <Card id={this.props.id} className={`${styles['rent-item']}`}>
+          <div className={styles.background} />
+          <img
+            className={`${styles['rent-item__thumbnail']}`}
+            src={this.props.cover}
+            alt={this.props.title}
+          />
+          <div className={`${styles['rent-item__title']}`}>
+            {this.props.title}
+          </div>
+        </Card>
       </li>
     )
   }
 }
-
 
 export default RentItem

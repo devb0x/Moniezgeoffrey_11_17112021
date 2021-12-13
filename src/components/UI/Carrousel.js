@@ -38,12 +38,14 @@ class Carrousel extends Component {
   render() {
     return (
       <div className={`${styles['carrousel']}`}>
-        <div className={`${styles['wrapper-arrow']}`}>
-          <i className="fa fa-chevron-left"
-             onClick={this.prevPictureHandler} />
-          <i className="fa fa-chevron-right"
-             onClick={this.nextPictureHandler} />
-        </div>
+        {this.props.pictures.length > 1 &&
+          <div className={`${styles['wrapper-arrow']}`}>
+            <i className="fa fa-chevron-left"
+               onClick={this.prevPictureHandler} />
+            <i className="fa fa-chevron-right"
+               onClick={this.nextPictureHandler} />
+          </div>
+        }
         <img
           className={`${styles['carrousel-img']}`}
           src={this.props.pictures[this.state.index]}

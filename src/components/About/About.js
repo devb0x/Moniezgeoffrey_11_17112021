@@ -40,16 +40,16 @@ class About extends Component {
           <div className={`${styles['background']}`} />
         </header>
 
-
-          {about.map((item, index) => {
-            return (
-              <Collapse key={index} title={item.category} data={item.text}/>
-            )
-          })}
-
-
+        {about.map((item, index) => {
+          return (
+            <Collapse key={index} title={item.category}>
+              <p>
+                {item.text}
+              </p>
+            </Collapse>
+          )
+        })}
       </section>
-
     )
   }
 

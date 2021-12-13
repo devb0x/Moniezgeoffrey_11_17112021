@@ -19,7 +19,7 @@ class Collapse extends Component {
 
   render() {
     return (
-      <div className={`${styles['wrapper']}`}>
+      <div className={styles.wrapper}>
         <button
           className={`${styles['button']}`}
           onClick={this.toggleHandler}
@@ -29,22 +29,7 @@ class Collapse extends Component {
             <i className="fa fa-chevron-down" />
           </span>
         </button>
-
-        { (this.props.title === "Équipements" && this.state.isOpen) &&
-          <ul className={`${styles['collapse-content']}`}>
-            {this.props.data.map((el, index) => (
-              <li key={index}>
-                {el}
-              </li>
-            ))}
-          </ul>
-        }
-
-        { (this.props.title !== "Équipements" && this.state.isOpen) &&
-        <p className={`${styles['collapse-content']}`}>
-          {this.props.data}
-        </p>
-        }
+        {this.state.isOpen && this.props.children}
       </div>
     )
   }

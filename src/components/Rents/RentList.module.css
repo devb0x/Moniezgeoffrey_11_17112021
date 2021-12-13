@@ -11,5 +11,8 @@
   .rents-list {
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: #F7F7F7;
+    border-radius: 25px;
+    padding: 3.5rem 0;
   }
 }

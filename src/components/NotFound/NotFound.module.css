@@ -1,6 +1,7 @@
 .not-found__wrapper {
   margin: auto;
   text-align: center;
+  min-height: calc(100vh - 209px);
 }
 
 .not-found__wrapper h1 {
@@ -19,5 +20,5 @@
   display: flex;
   font-size: 0.875rem;
   width: fit-content;
-  margin: 8.313rem auto;
+  margin: 8.313rem auto 0;
 }
