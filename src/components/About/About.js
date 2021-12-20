@@ -5,7 +5,7 @@ import styles from "./About.module.css"
 
 class About extends Component {
   render() {
-    let about = [
+    const about = [
       {
         category: "Fiabilité",
         text: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements," +

@@ -6,7 +6,6 @@ class Carrousel extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      pictures: this.props.pictures,
       index: 0
     }
     this.nextPictureHandler = this.nextPictureHandler.bind(this)

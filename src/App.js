@@ -29,9 +29,6 @@ class App extends Component {
             rents: result
           });
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           this.setState({
             isLoaded: true,
@@ -39,13 +36,10 @@ class App extends Component {
           });
         }
       )
-
   }
-
 
   render() {
     const {error, isLoaded, rents} = this.state;
-    // console.log(isLoaded)
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {

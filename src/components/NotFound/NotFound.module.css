@@ -22,3 +22,21 @@
   width: fit-content;
   margin: 8.313rem auto 0;
 }
+
+@media screen and (min-width: 768px){
+  .not-found__wrapper h1 {
+    font-weight: 700;
+    font-size: 18rem;
+    margin: 10vh;
+  }
+
+  .not-found__wrapper p {
+    font-size: 2.25rem;
+    width: auto;
+    line-height: 140%;
+  }
+
+  .not-found__link {
+    font-size: 1.125rem;
+  }
+}
